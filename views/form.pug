@@ -1,0 +1,52 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title  Registration Form
+  link(rel='stylesheet' href='form.css')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+.container
+  .title REPUBLIC OF UGANDA Covid Test Registration Form
+  .content
+    form(method='POST', name='entryForm' action='/form' onsubmit='return form()')
+      .user-details
+        .input-box  SurName
+          input#name(type='text' placeholder='Enter your name'  name='name')
+          span#nameError
+        .input-box Given Name
+          input#gname(type='text' placeholder='Enter given'  name='gname')
+          span#givenError
+        .input-box Date Of Test
+          input#date(type='date' placeholder='Enter date'  name='date')
+          span#dateError
+        .input-box Place Of Residence
+          input#place(type='text' placeholder='Enter place'  name='place')
+          span#placeError
+        .input-box Occupation
+          input#occupation(type='text' placeholder='Enter occupation' name='occupation')
+          span#occupationError 
+        .input-box Nationality
+          input#nationality(type='text' placeholder='Enter ' name='nationality')
+          span#nationalityError  
+        br  
+        label(for='category') category
+        select#category(name='category')
+          option(value='select') select category
+          option(value='negative') Negative
+          option(value="positive") Positive
+        br  
+        .gender-details
+          input#dot-1(type='radio' name='gender')
+          input#dot-2(type='radio' name='gender')
+          span.gender-title Gender
+          .category
+            label(for='dot-1')
+              span.dot.one
+              span.gender Male
+            label(for='dot-2')
+              span.dot.two
+              span.gender Female
+      .button
+        input(type='submit' value='Register')
+  script(src='formm.js')  
+
+  
