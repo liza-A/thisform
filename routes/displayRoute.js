@@ -9,6 +9,7 @@ const Forms = require('../models/form');
 
 //retrieve form details
 router.get('/display', async(req, res) => {
+    
     try{
         const data = await Forms.find({});
         console.log('>>>> all form details' ,data)

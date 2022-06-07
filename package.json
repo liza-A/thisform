@@ -2,10 +2,13 @@
   "name": "patient-registration-form",
   "version": "1.0.0",
   "description": "registration form",
-  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "start": "nodemon app && SET NODE_ENV=dev",
-    "test": "mocha --recursive --exit"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "mocha  --exit"
   },
   "author": "liz asamo",
   "license": "ISC",
@@ -26,8 +29,7 @@
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^7.0.0",
-    "pug": "^3.0.2",
-    "supertest": "^6.2.3"
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "chai-http": "^4.3.0"
