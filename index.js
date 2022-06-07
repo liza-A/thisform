@@ -12,7 +12,7 @@ const expressSession = require('express-session')({
   saveUninitialized: false
 });
 const cors = require('cors')
-const config = require('./config/database');
+//const config = require('./config/database');
 const formRoute = require('./routes/formRoute');
 const displayRoute = require('./routes/displayRoute');
 
@@ -21,15 +21,15 @@ const app = express();
 
 
 // creating a connection between the controller and database
-mongoose.connect(config.database)
-const db = mongoose.connection
+// mongoose.connect(config.database)
+// const db = mongoose.connection
 // checking if we've connected
-db.once('open',()=>{
-    logger.info('connected to mongodb');
-});
-db.on('error', (err)=>{
-logger.error(err);
-});
+// db.once('open',()=>{
+//     logger.info('connected to mongodb');
+// });
+// db.on('error', (err)=>{
+// logger.error(err);
+// });
 
 //don't show the log when it is test
 // if(config.util.getEnv('NODE_ENV') !== 'test') {
